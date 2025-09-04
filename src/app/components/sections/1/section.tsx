@@ -166,7 +166,7 @@ export default function Section1() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <p className="text-center text-gray-500 text-[10px] xs:text-xs mb-6 xs:mb-4 uppercase tracking-wider">
-            TECNOLOGIAS E PARCEIROS QUE CONFIAMOS
+            CRIANDO SOLUÇÕES EM SOFTWARE PARA PARCEIROS COMO
           </p>
           
           <InfiniteCarousel partners={partners} />
