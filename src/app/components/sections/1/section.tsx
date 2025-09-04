@@ -1,26 +1,113 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Lottie from 'lottie-react'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
+
+// Component para carregar e renderizar ícones Lottie
+const AnimatedIcon = ({ iconPath, className }: { iconPath: string, className?: string }) => {
+  const [animationData, setAnimationData] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const loadAnimation = async () => {
+      try {
+        const response = await fetch(iconPath)
+        const data = await response.json()
+        setAnimationData(data)
+      } catch (error) {
+        console.error('Error loading animation:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    loadAnimation()
+  }, [iconPath])
+
+  if (isLoading) {
+    return <div className={`animate-pulse bg-gray-200 rounded ${className}`} />
+  }
+
+  if (!animationData) {
+    return <div className={className}>⚠️</div>
+  }
+
+  return (
+    <Lottie
+      animationData={animationData}
+      className={className}
+      loop={true}
+      autoplay={true}
+    />
+  )
+}
+
+// Componente do carrossel infinito - container fixo
+const InfiniteCarousel = ({ partners }: { partners: Array<{name: string, logoPath: string}> }) => {
+  return (
+    <div className="relative w-full h-8 xs:h-10 md:h-12 overflow-hidden">
+      <div 
+        className="absolute flex items-center gap-4 xs:gap-6 md:gap-8 h-full"
+        style={{
+          animation: 'scroll-horizontal 65s linear infinite',
+          left: '0',
+          top: '0',
+        }}
+      >
+        {/* Repetir 3 vezes para loop infinito */}
+        {[...Array(3)].map((_, setIndex) =>
+          partners.map((partner, index) => (
+            <div
+              key={`${setIndex}-${index}`}
+              className="flex-shrink-0 w-10 h-6 xs:w-12 xs:h-7 md:w-16 md:h-9 flex items-center justify-center"
+            >
+              <Image
+                src={partner.logoPath}
+                alt={partner.name}
+                width={64}
+                height={36}
+                className="w-full h-full object-contain opacity-40 hover:opacity-80 filter grayscale hover:grayscale-0 transition-opacity duration-300"
+                draggable={false}
+                sizes="(max-width: 374px) 40px, (max-width: 767px) 48px, 64px"
+              />
+            </div>
+          ))
+        )}
+      </div>
+
+      {/* Fade gradients nas bordas */}
+      <div className="absolute inset-y-0 left-0 w-3 xs:w-4 md:w-6 bg-gradient-to-r from-white via-pink-100/80 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-y-0 right-0 w-3 xs:w-4 md:w-6 bg-gradient-to-l from-rose-200 via-pink-100/80 to-transparent pointer-events-none z-10" />
+    </div>
+  )
+}
 
 export default function Section1() {
   const services = [
-    { name: 'Desenvolvimento Web', icon: '💻', description: 'Aplicações modernas e responsivas' },
-    { name: 'Mobile Apps', icon: '📱', description: 'iOS e Android nativos' },
-    { name: 'Sistemas Enterprise', icon: '🏢', description: 'Soluções corporativas escaláveis' },
-    { name: 'API Development', icon: '🔗', description: 'Integrações robustas e seguras' },
-    { name: 'Cloud Solutions', icon: '☁️', description: 'Infraestrutura moderna' },
-    { name: 'UI/UX Design', icon: '🎨', description: 'Experiências excepcionais' },
-    { name: 'DevOps', icon: '⚙️', description: 'Automação e deploy contínuo' },
-    { name: 'Consultoria Tech', icon: '💡', description: 'Estratégias digitais' }
+    { name: 'Desenvolvimento Web', iconPath: '/assets/svg-overall/webdev.json', description: 'Aplicações modernas e responsivas' },
+    { name: 'Mobile Apps', iconPath: '/assets/svg-overall/mobile.json', description: 'iOS e Android nativos' },
+    { name: 'Sistemas Enterprise', iconPath: '/assets/svg-overall/company.json', description: 'Soluções corporativas escaláveis' },
+    { name: 'API Development', iconPath: '/assets/svg-overall/API.json', description: 'Integrações robustas e seguras' },
+    { name: 'Cloud Solutions', iconPath: '/assets/svg-overall/cloud.json', description: 'Infraestrutura moderna' },
+    { name: 'UI/UX Design', iconPath: '/assets/svg-overall/uiux.json', description: 'Experiências excepcionais' },
+    { name: 'DevOps', iconPath: '/assets/svg-overall/deploy.json', description: 'Automação e deploy contínuo' },
+    { name: 'Consultoria Tech', iconPath: '/assets/svg-overall/lightbulb.json', description: 'Estratégias digitais' }
   ]
 
   const partners = [
-    { name: 'AWS', logo: 'aws' },
-    { name: 'Google Cloud', logo: 'gcp' },
-    { name: 'Microsoft', logo: 'ms' },
-    { name: 'Vercel', logo: 'vercel' },
-    { name: 'Docker', logo: 'docker' },
-    { name: 'MongoDB', logo: 'mongo' },
+    { name: 'AWS', logoPath: '/assets/partners/aws-amazon.svg' },
+    { name: 'Google Cloud', logoPath: '/assets/partners/google-cloud.svg' },
+    { name: 'Microsoft', logoPath: '/assets/partners/microsoft.svg' },
+    { name: 'Vercel', logoPath: '/assets/partners/vercel.svg' },
+    { name: 'Docker', logoPath: '/assets/partners/docker.svg' },
+    { name: 'MongoDB', logoPath: '/assets/partners/mongodb.svg' },
+    { name: 'Ethereum', logoPath: '/assets/partners/ethereum.svg' },
+    { name: 'Tinder', logoPath: '/assets/partners/tinder.svg' },
+    { name: 'Chanel', logoPath: '/assets/partners/chanel.svg' },
+    { name: 'OLA', logoPath: '/assets/partners/ola.svg' },
+    { name: 'Ryzen', logoPath: '/assets/partners/ryzen.svg' },
   ]
 
   return (
@@ -71,31 +158,18 @@ export default function Section1() {
           </motion.p>
         </div>
 
-        {/* Partner Logos */}
+        {/* Partner Logos Carousel */}
         <motion.div
-          className="mb-4 xs:mb-6"
+          className="mb-12 xs:mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <p className="text-center text-gray-500 text-[10px] xs:text-xs mb-3 xs:mb-4 uppercase tracking-wider">
+          <p className="text-center text-gray-500 text-[10px] xs:text-xs mb-6 xs:mb-4 uppercase tracking-wider">
             TECNOLOGIAS E PARCEIROS QUE CONFIAMOS
           </p>
           
-          <div className="flex flex-wrap justify-center items-center gap-2 xs:gap-4 opacity-60">
-            {['React', 'Next.js', 'Node.js', 'AWS', 'Docker', 'MongoDB'].map((tech, index) => (
-              <motion.div
-                key={tech}
-                className="text-gray-600 font-medium text-xs xs:text-sm"
-                whileHover={{ scale: 1.1, color: '#FFA600' }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 1 }}
-              >
-                {tech}
-              </motion.div>
-            ))}
-          </div>
+          <InfiniteCarousel partners={partners} />
         </motion.div>
 
         {/* Service Buttons Grid */}
@@ -115,8 +189,11 @@ export default function Section1() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 + 1.4 }}
             >
-              <div className="text-lg xs:text-xl md:text-2xl mb-1 xs:mb-2 group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
+              <div className="w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 mb-1 xs:mb-2 group-hover:scale-110 transition-transform duration-300 mx-auto">
+                <AnimatedIcon 
+                  iconPath={service.iconPath} 
+                  className="w-full h-full" 
+                />
               </div>
               <h3 className="text-gray-800 font-semibold mb-1 text-[10px] xs:text-xs md:text-sm">
                 {service.name}

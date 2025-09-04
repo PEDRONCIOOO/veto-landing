@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Animação para o carrossel infinito */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.666%);
+  }
+}
+
+/* Pausa a animação no hover para melhor UX */
+.w-full:hover [style*="scroll-horizontal"] {
+  animation-play-state: paused;
+}
