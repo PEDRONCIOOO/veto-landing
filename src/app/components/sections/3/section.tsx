@@ -39,7 +39,7 @@ export default function Section3() {
         {/* Header */}
         <div className="text-center mb-3 xs:mb-4">
           <motion.p
-            className="text-gray-500 text-[7px] xs:text-xs mb-1 xs:mb-2 uppercase tracking-wider"
+            className="text-gray-500 text-[8px] xs:text-sm md:text-base lg:text-lg mb-1 xs:mb-2 uppercase tracking-wider"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -49,7 +49,7 @@ export default function Section3() {
           </motion.p>
           
           <motion.h2
-            className="text-xs xs:text-sm md:text-lg lg:text-2xl font-bold text-gray-800 mb-1 xs:mb-2 px-1"
+            className="text-xs xs:text-lg md:text-2xl lg:text-4xl font-bold text-gray-800 mb-1 xs:mb-2 px-1"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -62,7 +62,7 @@ export default function Section3() {
           </motion.h2>
           
           <motion.p
-            className="text-[8px] xs:text-[10px] md:text-xs text-gray-600 max-w-3xl mx-auto px-2"
+            className="text-[10px] xs:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -127,7 +127,7 @@ export default function Section3() {
           viewport={{ once: true }}
         >
           <motion.button
-            className="bg-gradient-to-r from-[#1822EE] via-[#9200B3] to-[#FFA600] text-white px-4 xs:px-6 py-2 xs:py-3 rounded-full font-semibold text-xs xs:text-sm md:text-base shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-r from-[#1822EE] via-[#9200B3] to-[#FFA600] text-white px-3 xs:px-6 py-1.5 xs:py-3 rounded-full font-semibold text-xs xs:text-base md:text-lg lg:text-xl shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05, boxShadow: '0 15px 30px rgba(24, 34, 238, 0.3)' }}
             whileTap={{ scale: 0.95 }}
           >

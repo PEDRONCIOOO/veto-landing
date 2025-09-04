@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Section2() {
   const services = [
@@ -8,54 +9,54 @@ export default function Section2() {
       title: "Desenvolvimento Web Moderno",
       description: "Plataformas web escaláveis e responsivas, construídas com as mais modernas tecnologias e frameworks.",
       features: [
-        { icon: "⚛️", text: "React & Next.js" },
-        { icon: "🚀", text: "Performance Otimizada" },
-        { icon: "📱", text: "Design Responsivo" }
+        { icon: "/assets/svg-overall/webdev-1", text: "React & Next.js" },
+        { icon: "/assets/svg-overall/webdev-2", text: "Performance Otimizada" },
+        { icon: "/assets/svg-overall/webdev-3", text: "Design Responsivo" }
       ]
     },
     {
       title: "Aplicações Mobile Nativas",
       description: "Desenvolvimento de aplicativos móveis nativos e multiplataforma para iOS e Android.",
       features: [
-        { icon: "📱", text: "iOS & Android" },
-        { icon: "⚡", text: "React Native" },
-        { icon: "🔔", text: "Push Notifications" }
+        { icon: "/assets/svg-overall/webdev-3", text: "iOS & Android" },
+        { icon: "/assets/svg-overall/webdev-1", text: "React Native" },
+        { icon: "/assets/svg-overall/notification", text: "Push Notifications" }
       ]
     },
     {
       title: "Sistemas Enterprise",
       description: "Soluções corporativas robustas e escaláveis, integradas aos principais fornecedores de nuvem.",
       features: [
-        { icon: "☁️", text: "Cloud Native" },
-        { icon: "🔐", text: "Segurança Avançada" },
-        { icon: "📊", text: "Analytics Integrado" }
+        { icon: "/assets/svg-overall/cloud", text: "Cloud Native" },
+        { icon: "/assets/svg-overall/lock", text: "Segurança Avançada" },
+        { icon: "/assets/svg-overall/dashboard", text: "Analytics Integrado" }
       ]
     },
     {
       title: "API & Integrações",
       description: "APIs RESTful e GraphQL para conectar sistemas e automatizar processos empresariais.",
       features: [
-        { icon: "🔗", text: "RESTful & GraphQL" },
-        { icon: "⚙️", text: "Automação" },
-        { icon: "🔄", text: "Sincronização em Tempo Real" }
+        { icon: "/assets/svg-overall/link", text: "RESTful & GraphQL" },
+        { icon: "/assets/svg-overall/config", text: "Automação" },
+        { icon: "/assets/svg-overall/exchange", text: "Sincronização em Tempo Real" }
       ]
     },
     {
       title: "DevOps & Infraestrutura",
       description: "Implementação de CI/CD, monitoramento e deploy automatizado para máxima eficiência.",
       features: [
-        { icon: "🚀", text: "Deploy Automatizado" },
-        { icon: "📈", text: "Monitoramento 24/7" },
-        { icon: "🔄", text: "CI/CD Pipeline" }
+        { icon: "/assets/svg-overall/deploy", text: "Deploy Automatizado" },
+        { icon: "/assets/svg-overall/monitoramento", text: "Monitoramento 24/7" },
+        { icon: "/assets/svg-overall/cicd", text: "CI/CD Pipeline" }
       ]
     },
     {
       title: "Consultoria Tecnológica",
       description: "Consultoria especializada para transformação digital e otimização de processos tecnológicos.",
       features: [
-        { icon: "🎯", text: "Estratégia Digital" },
-        { icon: "📋", text: "Auditoria de Código" },
-        { icon: "🏗️", text: "Arquitetura de Software" }
+        { icon: "/assets/svg-overall/target", text: "Estratégia Digital" },
+        { icon: "/assets/svg-overall/code", text: "Auditoria de Código" },
+        { icon: "/assets/svg-overall/arquiteto", text: "Arquitetura de Software" }
       ]
     }
   ]
@@ -71,7 +72,7 @@ export default function Section2() {
         {/* Header */}
         <div className="text-center mb-3 xs:mb-4">
           <motion.p
-            className="text-gray-500 text-[7px] xs:text-xs mb-1 xs:mb-2 uppercase tracking-wider"
+            className="text-gray-500 text-[8px] xs:text-sm md:text-base lg:text-lg mb-1 xs:mb-2 uppercase tracking-wider"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -81,7 +82,7 @@ export default function Section2() {
           </motion.p>
           
           <motion.h2
-            className="text-xs xs:text-sm md:text-lg lg:text-2xl font-bold text-gray-800 mb-1 xs:mb-2 px-1"
+            className="text-xs xs:text-lg md:text-2xl lg:text-4xl font-bold text-gray-800 mb-1 xs:mb-2 px-1"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -94,7 +95,7 @@ export default function Section2() {
           </motion.h2>
           
           <motion.p
-            className="text-[8px] xs:text-[10px] md:text-xs text-gray-600 max-w-3xl mx-auto px-2"
+            className="text-[10px] xs:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -117,11 +118,11 @@ export default function Section2() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -2 }}
             >
-              <h3 className="text-gray-800 font-semibold mb-1 xs:mb-2 text-[9px] xs:text-[10px] md:text-xs">
+              <h3 className="text-gray-800 font-semibold mb-1 xs:mb-2 text-[10px] xs:text-sm md:text-base lg:text-lg">
                 {service.title}
               </h3>
               
-              <p className="text-gray-600 text-[7px] xs:text-[8px] md:text-[10px] mb-1 xs:mb-2 leading-tight">
+              <p className="text-gray-600 text-[8px] xs:text-xs md:text-sm lg:text-base mb-1 xs:mb-2 leading-tight">
                 {service.description}
               </p>
               
@@ -135,8 +136,18 @@ export default function Section2() {
                     transition={{ duration: 0.3, delay: index * 0.1 + featureIndex * 0.05 }}
                     viewport={{ once: true }}
                   >
-                    <span className="text-[8px] xs:text-[10px]">{feature.icon}</span>
-                    <span className="text-gray-700 text-[6px] xs:text-[7px] md:text-[8px] font-medium">
+                    {feature.icon.startsWith('/assets/') ? (
+                      <Image 
+                        src={`${feature.icon}.svg`} 
+                        alt={feature.text}
+                        width={16}
+                        height={16}
+                        className="w-3 h-3 xs:w-4 xs:h-4 md:w-5 md:h-5"
+                      />
+                    ) : (
+                      <span className="text-[10px] xs:text-sm md:text-base">{feature.icon}</span>
+                    )}
+                    <span className="text-gray-700 text-[8px] xs:text-xs md:text-sm lg:text-base font-medium">
                       {feature.text}
                     </span>
                   </motion.div>
@@ -155,7 +166,7 @@ export default function Section2() {
           viewport={{ once: true }}
         >
           <motion.button
-            className="bg-gradient-to-r from-[#CF0C0C] via-[#9200B3] to-[#FFA600] text-white px-4 xs:px-6 py-2 xs:py-3 rounded-full font-semibold text-xs xs:text-sm md:text-base shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-r from-[#CF0C0C] via-[#9200B3] to-[#FFA600] text-white px-3 xs:px-6 py-1.5 xs:py-3 rounded-full font-semibold text-xs xs:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05, boxShadow: '0 15px 30px rgba(207, 12, 12, 0.3)' }}
             whileTap={{ scale: 0.95 }}
           >
