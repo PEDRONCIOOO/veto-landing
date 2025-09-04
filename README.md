@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Veto - Personalized Software Solutions
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15.3-black)
+![React](https://img.shields.io/badge/React-19.0-61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.x-38B2AC)
+![Performance](https://img.shields.io/badge/Performance-Optimized-green)
 
-First, run the development server:
+## 🚀 About Veto
+
+Veto is a cutting-edge company specializing in **personalized software development**. We create tailored digital solutions that perfectly match your business needs, from web applications to mobile apps and enterprise systems.
+
+### 🎯 What We Offer
+- **Custom Web Applications**: Modern, responsive, and high-performance
+- **Mobile Development**: Native and cross-platform solutions
+- **Enterprise Software**: Scalable systems for business operations
+- **UI/UX Design**: User-centered design approach
+- **Consulting**: Technical guidance and architecture planning
+
+---
+
+## 🛠️ Technical Stack
+
+This landing page is built with cutting-edge technologies for optimal performance:
+
+- **Next.js 15.3**: React framework with App Router
+- **React 19.0**: Latest React features and Server Components  
+- **TypeScript**: Type-safe development
+- **TailwindCSS 4.x**: Utility-first CSS framework
+- **Performance-First**: Optimized for Core Web Vitals
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd veto-landing
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📋 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev        # Start development server
+npm run build      # Create production build
+npm run start      # Start production server  
+npm run lint       # Run ESLint checks
+npm run lint:fix   # Fix ESLint issues
+```
 
-## Learn More
+## 🎨 Design Principles
 
-To learn more about Next.js, take a look at the following resources:
+### Performance-First Approach
+- **Optimized Bundle Size**: Tree-shaking and code splitting
+- **Fast Loading**: SSG/SSR with edge caching
+- **Responsive Design**: Mobile-first development
+- **Accessibility**: WCAG compliant components
+- **SEO Optimized**: Meta tags and structured data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### User Experience
+- **Intuitive Navigation**: Clear information architecture
+- **Modern Interface**: Clean and professional design
+- **Interactive Elements**: Engaging user interactions
+- **Cross-Browser**: Compatible with all modern browsers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌟 Key Features
 
-## Deploy on Vercel
+### Landing Page Sections
+- **Hero Section**: Compelling value proposition
+- **Services Overview**: Our software development offerings
+- **Portfolio**: Showcase of successful projects
+- **Process**: How we work with clients
+- **Testimonials**: Client success stories
+- **Contact**: Multiple ways to reach us
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Technical Features
+- **Server Components**: Optimized rendering
+- **Image Optimization**: Next.js automatic optimization
+- **Font Optimization**: Preloaded custom fonts
+- **Bundle Analysis**: Performance monitoring
+- **Edge Deployment**: Global CDN distribution
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📊 Performance Targets
+
+- **Lighthouse Score**: 90+ across all metrics
+- **Core Web Vitals**: Green scores for LCP, FID, CLS
+- **Time to Interactive**: < 2.5s
+- **First Contentful Paint**: < 1.5s
+- **Bundle Size**: Minimized and optimized
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+# Deploy to Vercel
+npm run build
+vercel --prod
+```
+
+### Other Platforms
+The application can be deployed to any platform supporting Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- Heroku
+
+## 🤝 Contributing
+
+We follow strict development standards:
+1. **TypeScript**: No `any` types allowed
+2. **Performance**: Always measure with Lighthouse
+3. **Accessibility**: Semantic HTML and ARIA attributes  
+4. **Responsive**: Mobile-first design approach
+5. **Testing**: Write tests for critical functionality
+
+## 📞 Contact Veto
+
+Ready to build your personalized software solution?
+
+- **Website**: [veto.dev](https://veto.dev)
+- **Email**: contact@veto.dev
+- **Phone**: +1 (555) VETO-DEV
+
+---
+
+*Built with ❤️ by the Veto team - Transforming ideas into powerful software solutions*
