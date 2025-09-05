@@ -9,18 +9,18 @@ export default function Section2() {
       title: "Desenvolvimento Web Moderno",
       description: "Plataformas web escaláveis e responsivas, construídas com as mais modernas tecnologias e frameworks.",
       features: [
-        { icon: "/assets/svg-overall/webdev-1", text: "React & Next.js" },
-        { icon: "/assets/svg-overall/webdev-2", text: "Performance Otimizada" },
-        { icon: "/assets/svg-overall/webdev-3", text: "Design Responsivo" }
+        { icon: "/assets/svg-overall/react", text: "React & Next.js" },
+        { icon: "/assets/svg-overall/rocket-2", text: "Performance Otimizada" },
+        { icon: "/assets/svg-overall/webdev-4", text: "Design Responsivo" }
       ]
     },
     {
       title: "Aplicações Mobile Nativas",
       description: "Desenvolvimento de aplicativos móveis nativos e multiplataforma para iOS e Android.",
       features: [
-        { icon: "/assets/svg-overall/webdev-3", text: "iOS & Android" },
-        { icon: "/assets/svg-overall/webdev-1", text: "React Native" },
-        { icon: "/assets/svg-overall/notification", text: "Push Notifications" }
+        { icon: "/assets/svg-overall/phone-red", text: "iOS & Android" },
+        { icon: "/assets/svg-overall/react-red", text: "React Native" },
+        { icon: "/assets/svg-overall/noti-red", text: "Push Notifications" }
       ]
     },
     {
@@ -36,7 +36,7 @@ export default function Section2() {
       title: "API & Integrações",
       description: "APIs RESTful e GraphQL para conectar sistemas e automatizar processos empresariais.",
       features: [
-        { icon: "/assets/svg-overall/link", text: "RESTful & GraphQL" },
+        { icon: "/assets/svg-overall/deploy", text: "RESTful & GraphQL" },
         { icon: "/assets/svg-overall/config", text: "Automação" },
         { icon: "/assets/svg-overall/exchange", text: "Sincronização em Tempo Real" }
       ]
@@ -45,18 +45,18 @@ export default function Section2() {
       title: "DevOps & Infraestrutura",
       description: "Implementação de CI/CD, monitoramento e deploy automatizado para máxima eficiência.",
       features: [
-        { icon: "/assets/svg-overall/deploy", text: "Deploy Automatizado" },
-        { icon: "/assets/svg-overall/monitoramento", text: "Monitoramento 24/7" },
-        { icon: "/assets/svg-overall/cicd", text: "CI/CD Pipeline" }
+        { icon: "/assets/svg-overall/deploy-red", text: "Deploy Automatizado" },
+        { icon: "/assets/svg-overall/status-red", text: "Monitoramento 24/7" },
+        { icon: "/assets/svg-overall/dev-red", text: "CI/CD Pipeline" }
       ]
     },
     {
       title: "Consultoria Tecnológica",
       description: "Consultoria especializada para transformação digital e otimização de processos tecnológicos.",
       features: [
-        { icon: "/assets/svg-overall/target", text: "Estratégia Digital" },
-        { icon: "/assets/svg-overall/code", text: "Auditoria de Código" },
-        { icon: "/assets/svg-overall/arquiteto", text: "Arquitetura de Software" }
+        { icon: "/assets/svg-overall/target-yellow", text: "Estratégia Digital" },
+        { icon: "/assets/svg-overall/dev-yellow", text: "Auditoria de Código" },
+        { icon: "/assets/svg-overall/software-yellow", text: "Arquitetura de Software" }
       ]
     }
   ]
@@ -126,7 +126,7 @@ export default function Section2() {
                 {service.description}
               </p>
               
-              <div className="space-y-0.5 xs:space-y-1">
+              <div className="space-y-0.5 xs:space-y-1 md:mt-6">
                 {service.features.map((feature, featureIndex) => (
                   <motion.div
                     key={featureIndex}

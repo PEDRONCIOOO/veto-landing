@@ -104,7 +104,7 @@ export default function Section1() {
     { name: 'Docker', logoPath: '/assets/partners/docker.svg' },
     { name: 'MongoDB', logoPath: '/assets/partners/mongodb.svg' },
     { name: 'Ethereum', logoPath: '/assets/partners/ethereum.svg' },
-    { name: 'Tinder', logoPath: '/assets/partners/tinder.svg' },
+    { name: 'Linkedin', logoPath: '/assets/partners/linkedin2.svg' },
     { name: 'Chanel', logoPath: '/assets/partners/chanel.svg' },
     { name: 'OLA', logoPath: '/assets/partners/ola.svg' },
     { name: 'Ryzen', logoPath: '/assets/partners/ryzen.svg' },
