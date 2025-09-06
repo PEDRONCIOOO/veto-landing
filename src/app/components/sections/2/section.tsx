@@ -111,22 +111,24 @@ export default function Section2() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-lg p-2 xs:p-3 md:p-4 hover:bg-white/80 transition-all duration-300 shadow-sm hover:shadow-md group"
+              className="bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-lg p-2 xs:p-3 md:p-4 hover:bg-white/80 transition-all duration-300 shadow-sm hover:shadow-md group flex flex-col justify-between min-h-[160px] xs:min-h-[180px] md:min-h-[200px]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -2 }}
             >
-              <h3 className="text-gray-800 font-semibold mb-1 xs:mb-2 text-[10px] xs:text-sm md:text-base lg:text-lg">
-                {service.title}
-              </h3>
+              <div>
+                <h3 className="text-gray-800 font-semibold mb-1 xs:mb-2 text-[10px] xs:text-sm md:text-base lg:text-lg">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 text-[8px] xs:text-xs md:text-sm lg:text-base leading-tight">
+                  {service.description}
+                </p>
+              </div>
               
-              <p className="text-gray-600 text-[8px] xs:text-xs md:text-sm lg:text-base mb-1 xs:mb-2 leading-tight">
-                {service.description}
-              </p>
-              
-              <div className="space-y-0.5 xs:space-y-1 md:mt-6">
+              <div className="space-y-0.5 xs:space-y-1">
                 {service.features.map((feature, featureIndex) => (
                   <motion.div
                     key={featureIndex}
