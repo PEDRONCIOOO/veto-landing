@@ -7,10 +7,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const companyLinks = [
-    { name: 'Sobre Nós', href: '#about', icon: '/assets/svg-overall/company' },
+    { name: 'Sobre Nós', href: '#about', icon: '/assets/svg-overall/notification' },
     { name: 'Serviços', href: '#services', icon: '/assets/svg-overall/webdev-4' },
     { name: 'Portfolio', href: '#portfolio', icon: '/assets/svg-overall/target' },
-    { name: 'Carreiras', href: '#careers', icon: '/assets/svg-overall/lightbulb' },
+    { name: 'Carreiras', href: '#careers', icon: '/assets/svg-overall/link' },
   ]
 
   const legalLinks = [
@@ -21,8 +21,8 @@ const Footer = () => {
   ]
 
   const contactInfo = [
-    { label: 'Email', value: 'contato@veto.dev', href: 'mailto:contato@veto.dev', icon: '/assets/svg-overall/link' },
-    { label: 'Telefone', value: '+55 (11) 99999-9999', href: 'tel:+5511999999999', icon: '/assets/svg-overall/notification' },
+    { label: 'Email', value: 'support@veto.com', href: 'mailto:support@veto.com', icon: '/assets/svg-overall/link' },
+    { label: 'Telefone', value: '+55 (67) 99999-9999', href: 'tel:+5511999999999', icon: '/assets/svg-overall/notification' },
     { label: 'WhatsApp', value: '+55 (11) 99999-9999', href: 'https://wa.me/5511999999999', icon: '/assets/svg-overall/notification' },
   ]
 
@@ -110,7 +110,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-gray-800 font-semibold mb-4 xs:mb-6 text-sm xs:text-base md:text-lg bg-gradient-to-r from-[#FFA600] to-[#CF0C0C] bg-clip-text text-transparent">
+            <h3 className="text-gray-800 font-semibold mb-4 xs:mb-6 text-sm xs:text-base md:text-lg bg-gradient-to-r from-[#FFA600] to-[#CF0C0C] bg-clip-text">
               Empresa
             </h3>
             <ul className="space-y-3">
@@ -140,7 +140,7 @@ const Footer = () => {
 
             {/* Legal Links */}
             <div className="mt-6 xs:mt-8">
-              <h4 className="text-gray-800 font-semibold mb-3 xs:mb-4 text-sm bg-gradient-to-r from-[#9200B3] to-[#FFA600] bg-clip-text text-transparent">
+              <h4 className="text-gray-800 font-semibold mb-3 xs:mb-4 text-sm bg-gradient-to-r from-[#9200B3] to-[#FFA600] bg-clip-text">
                 Legal
               </h4>
               <ul className="space-y-2">
@@ -170,7 +170,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-gray-800 font-semibold mb-4 xs:mb-6 text-sm xs:text-base md:text-lg bg-gradient-to-r from-[#CF0C0C] to-[#9200B3] bg-clip-text text-transparent">
+            <h3 className="text-gray-800 font-semibold mb-4 xs:mb-6 text-sm xs:text-base md:text-lg bg-gradient-to-r from-[#CF0C0C] to-[#9200B3] bg-clip-text">
               Contato
             </h3>
             <div className="space-y-3">
@@ -203,7 +203,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="mt-6 xs:mt-8">
-              <h4 className="text-gray-800 font-semibold mb-3 xs:mb-4 text-sm bg-gradient-to-r from-[#FFA600] to-[#CF0C0C] bg-clip-text text-transparent">
+              <h4 className="text-gray-800 font-semibold mb-3 xs:mb-4 text-sm bg-gradient-to-r from-[#FFA600] to-[#CF0C0C] bg-clip-text">
                 Redes Sociais
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -252,8 +252,7 @@ const Footer = () => {
                 © {currentYear} Veto. Todos os direitos reservados.
               </p>
               <div className="flex items-center space-x-4 text-xs text-gray-400">
-                <span>🏢 CNPJ: XX.XXX.XXX/0001-XX</span>
-                <span>📍 São Paulo, Brasil</span>
+                <span>📍 Campo Grande - MS, Brasil</span>
               </div>
             </div>
             
